@@ -15,3 +15,4 @@ class Solution(object):
                 return [seen[need], idx]
             
             seen[num] = idx
+    
