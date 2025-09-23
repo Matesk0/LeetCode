@@ -5,9 +5,16 @@ class Solution(object):
         :rtype: int
         """
         
-        result = 1
+        result = 0
 
-        while result ** 2 <= x:
-            result += 1
-        
-        return result - 1
+        for step in range(10, 0, -1):
+            while result ** 2 <= x:
+                result += step
+            
+            if result ** 2 == x:
+                return result
+
+            if result ** 2 > x:
+                result -= step
+
+        return result
